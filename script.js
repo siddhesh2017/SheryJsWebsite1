@@ -8,25 +8,30 @@ gsap.from('.navlink',{
     y: 10,
     duration: 0.5,
     ease: Power3,
-    opacity: 0
+    opacity: 0,
+    force3D: true
+
 })
 
 Shery.textAnimate("#headings h1", {
     //Parameters are optional.
-    style: 1,
+    style: 2,
     y: 10,
     delay: 0.05,
     duration: 0.5,
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     multiplier: 0.1,
+    force3D: true
+
   });
 
   gsap.from('.animation2',{
-    y:50,
-    stagger: 0.3,
+    y:30,
+    stagger: 0.2,
     opacity:0.5,
-    ease:Expo,
-    duration:1
+    ease:Expo.easenInOut,
+    duration:1,
+    force3D: true
   })
 
   Shery.imageEffect('#imgntext img',{
@@ -40,7 +45,7 @@ Shery.textAnimate("#headings h1", {
 })
 
 gsap.from("#imgntext img",{
-    z: 7,
+    y: 30,
     opacity:0,
     duration:1.5,
     ease:Expo
